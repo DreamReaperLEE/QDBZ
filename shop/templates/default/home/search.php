@@ -64,7 +64,7 @@
                             <ul>
                                 <?php foreach ($output['goods_class_array'] as $key => $value) { ?>
                                     <li>
-                                        <a href="/shop/index.php?act=search&op=index&cate_id=<?php echo $value['gc_id']; ?>"><?php echo $value['gc_name']; ?></a>
+                                        <a href="/app/shop/index.php?act=search&op=index&cate_id=<?php echo $value['gc_id']; ?>"><?php echo $value['gc_name']; ?></a>
                                     </li>
                                 <?php } ?>
                             </ul>
