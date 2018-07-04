@@ -110,7 +110,7 @@ class goodsModel extends Model{
         $condition['goods_id'] = $result1['goods_id'];
         $result = $model_goods ->getGoodinfo_new($condition);
         $total = 0;
-            if($result['gc_id_2'] == '4'){
+            if($result['gc_id_1'] == '1'){
                 if (APP_ID == 'mobile') {
                     //wcache($member_id,$data);
                     //$total =569;

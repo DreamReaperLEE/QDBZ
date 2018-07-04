@@ -39,7 +39,7 @@
           <dd class="cost-price"><strong><?php echo $lang['currency'] . ncPriceFormat($output['goods']['goods_marketprice']); ?></strong></dd>
         </dl>-->
         <!-- E 商品参考价格 -->
-        <?php if ($output['goods']['gc_id_2'] == '4') {?>
+        <?php if ($output['goods']['gc_id_1'] == '1') {?>
 
             <dl class="good-price">
                 <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
@@ -56,7 +56,7 @@
         <span>退房日期：</span><input type="date" id="date_end" onchange="getHotelPrice()" style="width:136px;margin-top:-3px;color:#666;border:0;outline:0;background-color:transparent;font-size:14px;vertical-align:middle"/>
         </div>
 
-        <?php } else if ($output['goods']['gc_id_2'] == '1082') {?>
+        <?php } else if ($output['goods']['gc_id_1'] == '2') {?>
 <!--          <p>二号位</p>-->
             <dl class="good-price">
                 <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
@@ -71,7 +71,7 @@
             <div style="text-align: center; padding: 20px;">
                 <span>选择日期：</span><input type="date" id="meetingdate"  style="width:136px;margin-top:-3px;color:#666;border:0;outline:0;background-color:transparent;font-size:14px;vertical-align:middle"/><br/><br/>
             </div>
-        <?php } else if ($output['goods']['gc_id_2'] == '1083') {?>
+        <?php } else if ($output['goods']['gc_id_1'] == '3') {?>
             <dl class="good-price">
                 <dt><?php echo $lang['goods_index_goods_price'];?><?php echo $lang['nc_colon'];?></dt>
                 <dd class="price">
