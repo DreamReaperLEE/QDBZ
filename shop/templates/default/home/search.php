@@ -268,12 +268,12 @@
 
     function myInsert(){
         if(document.getElementsByClassName("sort-box")!=null){
-            if (document.getElementsByClassName("sort-box")[0].children[0].text == "酒店") {
+            if (document.getElementsByClassName("sort-box")[1].children[0].text == "住宿") {
                 var insertText = '<div style="text-align: left; padding: 20px;"><span>入住日期：</span><input type="date" id="date_start" onchange="setDateCookie()"/><span>退房日期：</span><input type="date" id="date_end" onchange="setDateCookie()"/><button type="button" onclick="SearchClick()">搜索</button></div>';
                 document.getElementById("insert").innerHTML = insertText;
                 SetTimeInput();
             }
-            else if(document.getElementsByClassName("sort-box")[0].children[0].text == "约车"){
+            else if(document.getElementsByClassName("sort-box")[1].children[0].text == "用车"){
                 var insertText = '<style type="text/css">#allmap{height:300px;width:100%;}#r-result,#r-result table{width:100%;}#allmap{ z-index:10000;}#wai{padding: 6px;box-shadow: 1px 1px 3px #000;}</style><div id="wai"><div id="allmap"></div></div><div id="driving_way"><span id = "tooltip">总路程为：</span><span id = "tooltip_num">_______</span><span id = "tooltip_after">公里</span><br/>出发地：<input id="start" />目的地：<input id="end" /><select><option value="0">最少时间</option><option value="1">最短距离</option><option value="2">避开高速</option></select><input type="button" id="result" value="查询"/></div>';
                 document.getElementById("insert").innerHTML = insertText;
                 setDrive();
