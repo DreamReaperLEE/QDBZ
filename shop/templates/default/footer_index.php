@@ -30,7 +30,7 @@
             <div class="col-md-4 col-lg-4 col-sm-4 " style="padding:0;">
                 <h3 class="weui-f18">联系我们</h3>
                 <ul class="bgn">
-                    <li><i></i> <a href="bz.heuqst.cn" class="weui-v_m weui-t_d">1网址主页：bz.heuqst.cn</a></li>
+                    <li><i></i> <a href="bz.heuqst.cn" class="weui-v_m weui-t_d">网址主页：bz.heuqst.cn</a></li>
                     <li><i class="fbg1"></i> <span class="weui-v_m">联 系 人 ：李奕霏</span></li>
                     <li><i class="fbg2"></i> <span class="weui-v_m">联系邮箱：xmgl@heuqst.cn</span></li>
                     <li><i class="fbg3"></i> <span class="weui-v_m">手机号码：135 8922 8865</span></li>
