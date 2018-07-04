@@ -25,3 +25,4 @@ hs_err_pid*
 !/data/cache/index/index.html
 !/data/cache/tpl/index.html
 !/data/cache/index.html
+/phpinfo.php
