@@ -247,9 +247,10 @@ class member_buyControl extends mobileMemberControl {
 
         $available_predeposit = $available_rc_balance = 0;
         $buyer_info = Model('member')->getMemberInfoByID($this->member_info['member_id']);
-        if (floatval($buyer_info['available_predeposit']) > 0) {
-            $pay['member_pd'] = $buyer_info['available_predeposit'];
-        }
+//        if (floatval($buyer_info['available_predeposit']) > 0) {
+//            $pay['member_pd'] = $buyer_info['available_predeposit'];
+//        }
+        $pay['member_pd'] = $buyer_info['available_predeposit'];
         if (floatval($buyer_info['available_rc_balance']) > 0) {
             $pay['member_rcb'] = $buyer_info['available_rc_balance'];
         }

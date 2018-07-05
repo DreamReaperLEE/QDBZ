@@ -611,34 +611,36 @@ class buyLogic {
         }
 
         //是否开增值税发票
-//        $input_if_vat = $this->buyDecrypt($post['vat_hash'], $this->_member_info['member_id']);
-//        if (!in_array($input_if_vat,array('allow_vat','deny_vat'))) {
-//            throw new Exception('订单保存出现异常[增值税发票出现错误]，请重试');
-//        }
+       $input_if_vat = $this->buyDecrypt($post['vat_hash'], $this->_member_info['member_id']);
+       if (!in_array($input_if_vat,array('allow_vat','deny_vat'))) {
+            throw new Exception('订单保存出现异常[增值税发票出现错误]，请重试');
+       }
         $input_if_vat = true ;
 
-//        if (!$post['chain']['id']) {
-//            //是否支持货到付款
-//            $input_if_offpay = $this->buyDecrypt($post['offpay_hash'], $this->_member_info['member_id']);
-//            if (!in_array($input_if_offpay,array('allow_offpay','deny_offpay'))) {
-//                throw new Exception('订单保存出现异常[货到付款验证错误]，请重试');
-//            }
-//            $input_if_offpay = ($input_if_offpay == 'allow_offpay') ? true : false;
-//
-//            //是否支持货到付款 具体到各个店铺
-//            $input_if_offpay_batch = $this->buyDecrypt($post['offpay_hash_batch'], $this->_member_info['member_id']);
-//            if (!is_array($input_if_offpay_batch)) {
-//                throw new Exception('订单保存出现异常[部分店铺付款方式出现异常]，请重试');
-//            }
-//        } else {
+        if (!$post['chain']['id']) {
+            //是否支持货到付款
+            $input_if_offpay = $this->buyDecrypt($post['offpay_hash'], $this->_member_info['member_id']);
+           if (!in_array($input_if_offpay,array('allow_offpay','deny_offpay'))) {
+               throw new Exception('订单保存出现异常[货到付款验证错误]，请重试');
+            }
+           //$input_if_offpay = ($input_if_offpay == 'allow_offpay') ? true : false;
+            $input_if_offpay = true;
+
+            //是否支持货到付款 具体到各个店铺
+           $input_if_offpay_batch = $this->buyDecrypt($post['offpay_hash_batch'], $this->_member_info['member_id']);
+           if (!is_array($input_if_offpay_batch)) {
+                throw new Exception('订单保存出现异常[部分店铺付款方式出现异常]，请重试');
+           }
+      }
+//      else {
 //            $input_if_offpay = false;
 //            $input_if_offpay_batch = array();
 //        }
 
         //付款方式:在线支付/货到付款(online/offline)
-        if (!in_array($post['pay_name'],array('online','offline','chain'))) {
-            throw new Exception('付款方式错误，请重新选择');
-        }
+//        if (!in_array($post['pay_name'],array('online','offline','chain'))) {
+//            throw new Exception('付款方式错误，请重新选择');
+//        }
         $input_pay_name = $post['pay_name'];
 
         //验证发票信息

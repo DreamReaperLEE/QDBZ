@@ -128,7 +128,7 @@ class buy_1Logic {
                 $condition['goods_id'] = $cart_info['goods_id'];
                 $goods_info = $model_goods->getGoodinfo_new($condition);
 
-                if ( $goods_info['gc_id_2'] == '4') {
+                if ( $goods_info['gc_id_1'] == '1') {
                     // if($model_seller->getSellerGroupLim($condition2,1,$model_goods->getGoodsNewPrice($cart_info,1))){
 
                         $store_cart[$key]['goods_total'] =ncPriceFormat(($model_goods->getGoodsNewPrice($cart_info,1)) * $cart_info['goods_num']);
@@ -172,7 +172,7 @@ class buy_1Logic {
                 $condition['goods_id'] = $cart_info['goods_id'];
                 $goods_info = $model_goods->getGoodinfo_new($condition);
 
-                if ( $goods_info['gc_id_2'] == '4') {
+                if ( $goods_info['gc_id_1'] == '1') {
                     if (APP_ID == 'mobile'){
 
                         return true;

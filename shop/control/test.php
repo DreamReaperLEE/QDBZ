@@ -49,7 +49,7 @@ public function ttOp(){
     $goods_info = $model_goods->getGoodsList($condition);
 
      foreach ($goods_info as $v){
-    if($v['gc_id_2'] == '4'){
+    if($v['gc_id_1']=='1'){
         $id= $v['goods_commonid'];
 
         $store_cart['goods_total']=ncPriceFormat( $model_hotel->totalprice($id,$begindate,$enddate));
@@ -147,7 +147,7 @@ public function xxOp(){
 //        //$condition['id'] = array(between,array('1','8'));
 //        /*               $date =  date("Y-m-d");*/
 //
-//        if($goodinfo['gc_id_2'] == '4'){
+//        if($goodinfo['gc_id_1'] == '1'){
 //            $total = 0;
 //            foreach ($hotellist as $v) {
 //                if ($v['date'] >= $begindate && $v['date'] < $enddate) {

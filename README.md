@@ -8,6 +8,6 @@
 
 1. 将'\配置文件\config.ini.php'文件复制到'\data\config'文件夹下，并修改'$myhost'和数据库参数。
 2. 安装nodejs，将'\配置文件\im.rar'文件解压缩到nodejs安装文件夹下，设置config.js文件，运行im.bat或者MagicStarter.exe绑定im.bat启动服务。
-test
+
 
 

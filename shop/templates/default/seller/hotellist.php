@@ -73,7 +73,7 @@
                 $.ajax({
                     type: 'post', //post方式
                     async: false, //是否异步，默认为true
-                    url: "/app/shop/index.php?act=hotel&op=save_hotel", //发送的接收地址。
+                    url: "/shop/index.php?act=hotel&op=save_hotel", //发送的接收地址。
                     data: {data:data,common_id:common_id}, //参数
                     error: function (xhr) { //如果发生错误，在这里处理或提示
                     },
@@ -85,7 +85,7 @@
                     // dataType: "text" //返回结果的类型。
 
                 });
-                window.location.href="/app/shop/index.php?act=store_goods_online&op=index";
+                window.location.href="/shop/index.php?act=store_goods_online&op=index";
 
                 },
             cancel: function () {

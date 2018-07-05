@@ -24,7 +24,7 @@ class advControl {
         echo advshow($ap_id,'js');
     }
     /**
-     * 异步调用广告 测试git
+     * 异步调用广告
      *
      */
     public function get_adv_listOp(){
